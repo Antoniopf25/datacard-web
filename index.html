@@ -3,29 +3,44 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Datacard</title>
+  <title>Datacard App</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Datacard Editable</h1>
-    <div class="datacard">
-      <img src="datacard.png" alt="Datacard">
-      <div class="fields">
-        <input type="text" placeholder="CALLSIGN">
-        <input type="text" placeholder="AVO">
-        <input type="text" placeholder="GCS">
-        <input type="text" placeholder="ROLE">
-        <input type="text" placeholder="MSN">
-        <input type="text" placeholder="SML">
-        <input type="text" placeholder="BRF">
-        <input type="text" placeholder="NEST">
-        <input type="text" placeholder="SEQ">
-        <input type="text" placeholder="LVG">
+  <nav>
+    <button onclick="showPage('datacard')">Datacard</button>
+    <button onclick="showPage('briefing')">Briefing</button>
+    <button onclick="showPage('debriefing')">Debriefing</button>
+    <button onclick="showPage('weather')">Weather</button>
+    <button onclick="showPage('airspace')">Airspace Restrictions</button>
+  </nav>
+
+  <main>
+    <section id="datacard" class="page">
+      <h1>Datacard</h1>
+      <div id="datacard-content">
+        <div class="datacard-grid">
+          <label>CALLSIGN<input type="text" /></label>
+          <label>AVO<input type="text" /></label>
+          <label>GCS<input type="text" /></label>
+          <label>ROLE<input type="text" /></label>
+          <label>MSN<input type="text" /></label>
+          <label>SML<input type="text" /></label>
+          <label>BRF<input type="text" /></label>
+          <label>NEST<input type="text" /></label>
+          <label>SEQ<input type="text" /></label>
+          <label>LVG<input type="text" /></label>
+        </div>
       </div>
-    </div>
-    <button onclick="printPDF()">Imprimir</button>
-  </div>
+      <button onclick="printPDF()">Imprimir</button>
+    </section>
+
+    <section id="briefing" class="page hidden"><h1>Briefing</h1></section>
+    <section id="debriefing" class="page hidden"><h1>Debriefing</h1></section>
+    <section id="weather" class="page hidden"><h1>Weather</h1></section>
+    <section id="airspace" class="page hidden"><h1>Airspace Restrictions</h1></section>
+  </main>
+
   <script src="script.js"></script>
 </body>
 </html>

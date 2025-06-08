@@ -2,30 +2,50 @@
 body {
   font-family: sans-serif;
   background: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+nav {
+  background: #333;
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+}
+nav button {
+  color: white;
+  background: #555;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+main {
   padding: 20px;
 }
-.container {
-  max-width: 800px;
-  margin: auto;
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
+.page {
+  display: none;
 }
-.datacard {
-  position: relative;
+.page.active {
+  display: block;
 }
-.datacard img {
-  width: 100%;
-}
-.fields {
+.datacard-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  gap: 8px;
-  margin-top: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 12px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
-.fields input {
-  padding: 4px;
+.datacard-grid label {
   font-size: 14px;
+  display: flex;
+  flex-direction: column;
+}
+.datacard-grid input {
+  padding: 6px;
+  font-size: 14px;
+  margin-top: 4px;
 }
 button {
   margin-top: 20px;
