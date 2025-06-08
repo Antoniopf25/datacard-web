@@ -3,7 +3,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Datacard con Campos</title>
+  <title>Datacard Editable</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -18,18 +18,37 @@
   <main>
     <section id="datacard" class="page active">
       <h1>Datacard</h1>
-      <div id="print-area" class="datacard-wrapper">
-        <img src="datacard.png" alt="Datacard" class="background" />
-        <input style="top: 10%; left: 10%;" placeholder="CALLSIGN" />
-        <input style="top: 10%; left: 40%;" placeholder="AVO" />
-        <input style="top: 10%; left: 70%;" placeholder="GCS" />
-        <input style="top: 20%; left: 10%;" placeholder="ROLE" />
-        <input style="top: 20%; left: 40%;" placeholder="MSN" />
-        <input style="top: 20%; left: 70%;" placeholder="SML" />
-        <input style="top: 30%; left: 10%;" placeholder="BRF" />
-        <input style="top: 30%; left: 40%;" placeholder="NEST" />
-        <input style="top: 30%; left: 70%;" placeholder="SEQ" />
-        <input style="top: 40%; left: 10%;" placeholder="LVG" />
+      <div id="print-area">
+        <table class="datacard-table">
+          <tr>
+            <th>CALLSIGN</th>
+            <td><input type="text" /></td>
+            <th>AVO</th>
+            <td><input type="text" /></td>
+            <th>GCS</th>
+            <td><input type="text" /></td>
+          </tr>
+          <tr>
+            <th>ROLE</th>
+            <td><input type="text" /></td>
+            <th>MSN</th>
+            <td><input type="text" /></td>
+            <th>SML</th>
+            <td><input type="text" /></td>
+          </tr>
+          <tr>
+            <th>BRF</th>
+            <td><input type="text" /></td>
+            <th>NEST</th>
+            <td><input type="text" /></td>
+            <th>SEQ</th>
+            <td><input type="text" /></td>
+          </tr>
+          <tr>
+            <th>LVG</th>
+            <td colspan="5"><input type="text" style="width: 100%;" /></td>
+          </tr>
+        </table>
       </div>
       <button onclick="printPDF()">Imprimir</button>
     </section>

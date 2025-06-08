@@ -25,24 +25,38 @@ main {
 .page.active {
   display: block;
 }
-.datacard-wrapper {
-  position: relative;
+.datacard-table {
   width: 100%;
-  max-width: 800px;
-  margin: auto;
+  border-collapse: collapse;
+  margin-top: 20px;
 }
-.background {
+.datacard-table th,
+.datacard-table td {
+  border: 2px solid black;
+  padding: 8px;
+}
+.datacard-table input {
   width: 100%;
-  display: block;
-}
-.datacard-wrapper input {
-  position: absolute;
-  width: 20%;
-  padding: 5px;
-  font-size: 12px;
+  padding: 4px;
+  font-size: 14px;
   box-sizing: border-box;
 }
 button {
   margin-top: 20px;
   padding: 10px 20px;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #print-area, #print-area * {
+    visibility: visible;
+  }
+  #print-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
 }
